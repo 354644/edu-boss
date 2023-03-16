@@ -1,32 +1,39 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <!-- 根路由出口 -->
+    <h1>我是app组件...``</h1>
+    <router-view />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+// extend写法
+// import Vue from 'vue'
+// export default Vue.extend({
+//   data () {
+//     return {
+//       a: 1,
+//       b: '2'
+//     }
+//   },
+//   methods: {
+//     test () {
+//       this.a.c()
+//     }
+//   }
+// })
 
-nav {
-  padding: 30px;
+// class类写法
+import Vue from 'vue'
+import Component from 'vue-class-component'
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+@Component
+export default class App extends Vue {
+  a = 1
+  test () {
+    // this.a.
   }
 }
-</style>
+</script>
+
+<style lang="scss" scoped></style>
