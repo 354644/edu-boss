@@ -34,7 +34,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "src/views/advert/index.vie"  ],
   "exclude": [
     "node_modules"
   ]
